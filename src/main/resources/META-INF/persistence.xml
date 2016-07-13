@@ -1,0 +1,24 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+    <persistence-unit name="MiUnidadPersistencia" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>modulo.Articulo</class>
+        <class>modulo.Comentario</class>
+        <class>modulo.Etiqueta</class>
+        <class>modulo.Usuario</class>
+        <class>modulo.LikeA</class>
+        <class>modulo.LikeC</class>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/Practica4" />
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
+            <property name="javax.persistence.jdbc.user" value="sa" />
+            <property name="javax.persistence.jdbc.password" value="" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="javax.persistence.schema-generation.database.action" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>
